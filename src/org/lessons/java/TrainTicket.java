@@ -19,7 +19,7 @@ public class TrainTicket {
         age = keyBoardReader.nextInt();
 
         double ticketPrice = (km * 0.21);
-
+        //condition
         if (age < 18){
             ticketPriceTot = ticketPrice - (ticketPrice*0.20);
             System.out.println("Il prezzo del tuo biglietto è di: " + ticketPriceTot + "euro");
