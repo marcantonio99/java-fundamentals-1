@@ -13,6 +13,7 @@ public class FizzBuzz {
         //bonus condition
         if (n <= 0 || n > 1000){
             System.out.println("Il numero inserito non è valido!");
+            return;
         }
 
         //conditions and loop
