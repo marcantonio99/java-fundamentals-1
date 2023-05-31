@@ -1,5 +1,6 @@
 package org.lessons.java;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TrainTicket {
@@ -18,7 +19,11 @@ public class TrainTicket {
         System.out.println("inserisci la tua età: ");
         age = keyBoardReader.nextInt();
 
-        double ticketPrice = (km * 0.21);
+        double ticketPrice = km * 0.21;
+
+        //bonus
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
         //condition
         if (age < 18){
             ticketPriceTot = ticketPrice - (ticketPrice*0.20);
