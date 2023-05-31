@@ -25,14 +25,17 @@ public class TrainTicket {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
         //condition
-        if (age < 18){
-            ticketPriceTot = ticketPrice - (ticketPrice*0.20);
-            System.out.println("Il prezzo del tuo biglietto è di: " + ticketPriceTot + "euro");
+        if (age < 18) {
+            ticketPriceTot = ticketPrice - (ticketPrice * 0.20);
+            String formattedPriceTot = decimalFormat.format(ticketPriceTot);
+            System.out.println("Il prezzo del tuo biglietto è di: " + formattedPriceTot + " euro");
         } else if (age > 65) {
-            ticketPriceTot = ticketPrice - (ticketPrice*0.40);
-            System.out.println("Il prezzo del tuo biglietto è di: " + ticketPriceTot + "euro");
-        }else{
-            System.out.println("Il prezzo del tuo biglietto è di: " + ticketPrice + "euro");
+            ticketPriceTot = ticketPrice - (ticketPrice * 0.40);
+            String formattedPriceTot = decimalFormat.format(ticketPriceTot);
+            System.out.println("Il prezzo del tuo biglietto è di: " + formattedPriceTot + " euro");
+        } else {
+            String formattedPrice = decimalFormat.format(ticketPrice);
+            System.out.println("Il prezzo del tuo biglietto è di: " + formattedPrice + " euro");
         }
     }
 }
